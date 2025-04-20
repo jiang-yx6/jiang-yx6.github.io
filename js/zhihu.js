@@ -1,4 +1,5 @@
-fetch('https://api.cenguigui.cn/api/juhe/hotlist.php?type=zhihu').then(data=>data.json()).then((json)=>{
+fetch('https://readep.com/zhihu').then(data=>data.json()).then((json)=>{
+    console.log(json)
     let html = ''
     html += '<div class="zhihu-list">'
     var i = 1 
