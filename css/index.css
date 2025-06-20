@@ -3622,7 +3622,7 @@ h1.page-title + .tag-cloud-list {
   -ms-transition: all 0.5s;
   transition: all 0.5s;
   padding-bottom: 8px;
-  background: rgba(255,255,255,0.1) !important;
+  background: rgba(255,255,255,0.9) !important;
   border-bottom: 1px solid rgba(255,255,255,0.3);
 }
 @media screen and (max-width: 768px) {
