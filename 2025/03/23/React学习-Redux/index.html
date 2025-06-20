@@ -1,9 +1,9 @@
-<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"><title>React学习-Redux | 椒盐虾</title><meta name="author" content="Ethan Jiang,1312534629@qq.com"><meta name="copyright" content="Ethan Jiang"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="ffffff"><meta name="description" content="Reduxredux介绍1、redux是一个专门用于做状态管理的JS库 2、它可以用在react、vue、angular等项目中，但基本与react配合使用 3、作用：集中式管理react应用中多个组件共享的状态 redux工作流程 .hgkmfxhwkfft{zoom:100%;}    redux的三个核心概念1.action 动作对象 包含两个属性 ​	type：标识属性，值为字符串，唯一，">
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"><title>React学习-Redux | 椒盐虾</title><meta name="author" content="Ethan Jiang,1312534629@qq.com"><meta name="copyright" content="Ethan Jiang"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="ffffff"><meta name="description" content="Reduxredux介绍1、redux是一个专门用于做状态管理的JS库 2、它可以用在react、vue、angular等项目中，但基本与react配合使用 3、作用：集中式管理react应用中多个组件共享的状态 redux工作流程 .qlmadirxchor{zoom:100%;}    redux的三个核心概念1.action 动作对象 包含两个属性 ​	type：标识属性，值为字符串，唯一，">
 <meta property="og:type" content="article">
 <meta property="og:title" content="React学习-Redux">
 <meta property="og:url" content="https://jiang-yx6.github.io/2025/03/23/React%E5%AD%A6%E4%B9%A0-Redux/index.html">
 <meta property="og:site_name" content="椒盐虾">
-<meta property="og:description" content="Reduxredux介绍1、redux是一个专门用于做状态管理的JS库 2、它可以用在react、vue、angular等项目中，但基本与react配合使用 3、作用：集中式管理react应用中多个组件共享的状态 redux工作流程 .hgkmfxhwkfft{zoom:100%;}    redux的三个核心概念1.action 动作对象 包含两个属性 ​	type：标识属性，值为字符串，唯一，">
+<meta property="og:description" content="Reduxredux介绍1、redux是一个专门用于做状态管理的JS库 2、它可以用在react、vue、angular等项目中，但基本与react配合使用 3、作用：集中式管理react应用中多个组件共享的状态 redux工作流程 .qlmadirxchor{zoom:100%;}    redux的三个核心概念1.action 动作对象 包含两个属性 ​	type：标识属性，值为字符串，唯一，">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="https://pic4.zhimg.com/80/v2-4c2bff3ec82d43786430e4aca0fac7bb_1440w.webp">
 <meta property="article:published_time" content="2025-03-23T01:48:19.000Z">
@@ -155,7 +155,7 @@
       }
     }
     detectApple()
-    })(window)</script><link rel="stylesheet" href="/css/font.css"><link rel="stylesheet" href="/css/zhihu.css"><link rel="stylesheet" href="/css/collections.css"><script>document.addEventListener("DOMContentLoaded",function(){const e=document.getElementById("busuanzi_value_site_uv"),t=document.getElementById("busuanzi_value_site_pv"),n=new MutationObserver(e=>{for(let t of e)if("childList"===t.type){n.disconnect(),t.target.innerHTML=parseInt(t.target.innerHTML)+1e5;break}}),i=new MutationObserver(e=>{for(let t of e)if("childList"===t.type){i.disconnect(),t.target.innerHTML=parseInt(t.target.innerHTML)+3e5;break}}),r={childList:!0};n.observe(e,r),i.observe(t,r)});</script><meta name="generator" content="Hexo 6.3.0"></head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><script>const preloader = {
+    })(window)</script><link rel="stylesheet" href="/css/font.css"><link rel="stylesheet" href="/css/zhihu.css"><link rel="stylesheet" href="/css/collections.css"><link rel="stylesheet" href="/css/custom.css"><link rel="stylesheet" href="/css/pagecard.css"><script>document.addEventListener("DOMContentLoaded",function(){const e=document.getElementById("busuanzi_value_site_uv"),t=document.getElementById("busuanzi_value_site_pv"),n=new MutationObserver(e=>{for(let t of e)if("childList"===t.type){n.disconnect(),t.target.innerHTML=parseInt(t.target.innerHTML)+1e5;break}}),i=new MutationObserver(e=>{for(let t of e)if("childList"===t.type){i.disconnect(),t.target.innerHTML=parseInt(t.target.innerHTML)+3e5;break}}),r={childList:!0};n.observe(e,r),i.observe(t,r)});</script><meta name="generator" content="Hexo 6.3.0"></head><body><div id="loading-box"><div class="loading-left-bg"></div><div class="loading-right-bg"></div><div class="spinner-box"><div class="configure-border-1"><div class="configure-core"></div></div><div class="configure-border-2"><div class="configure-core"></div></div><div class="loading-word">加载中...</div></div></div><script>const preloader = {
   endLoading: () => {
     document.body.style.overflow = 'auto';
     document.getElementById('loading-box').classList.add("loaded")
@@ -175,7 +175,7 @@ if (true) {
 <p>2、它可以用在react、vue、angular等项目中，但基本与react配合使用</p>
 <p>3、作用：<strong>集中式管理</strong>react应用中多个组件<strong>共享</strong>的状态</p>
 <p><strong>redux工作流程</strong></p>
-<style>.hgkmfxhwkfft{zoom:100%;}</style><img src="/2025/03/23/React%E5%AD%A6%E4%B9%A0-Redux/image-20250323100124053.png" class="hgkmfxhwkfft" alt="image-20250323100124053">
+<style>.qlmadirxchor{zoom:100%;}</style><img src="/2025/03/23/React%E5%AD%A6%E4%B9%A0-Redux/image-20250323100124053.png" class="qlmadirxchor" alt="image-20250323100124053">
 
 
 

@@ -1,5 +1,8 @@
-@font-face {
-  font-family: 'NotoSerifItalic-2Y8w';
-  font-display: swap;
-  src: url('../fonts/NotoSerifItalic-2Y8w.ttf') format("truetype");  
+@font-face{
+    font-family: 'JetBrains Mono';
+    font-display: swap;
+    src: url('../font/JetBrainsMono-Regular.ttf') format("truetype");
+}
+body {
+    font-family: 'JetBrains Mono';
 }

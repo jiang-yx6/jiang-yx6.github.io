@@ -1,0 +1,245 @@
+/* 文章卡片基础样式 */
+.recent-post-item {
+  position: relative;
+  background: rgba(255, 255, 255, 0.95) !important;
+  border-radius: 20px !important;
+  padding: 18px !important;
+  margin-bottom: 25px !important;
+  border: none !important;
+  transition: all 0.3s ease-in-out !important;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05) !important;
+}
+
+/* 覆盖层链接 */
+.cover-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  cursor: pointer;
+}
+
+/* 卡片悬浮效果 */
+.recent-post-item:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08) !important;
+}
+
+/* 文章标题样式 */
+.recent-post-item .post-title {
+  position: relative;
+  z-index: 2;
+  font-size: 1.6em !important;
+  font-weight: 600 !important;
+  color: #344c67 !important;
+  line-height: 1.5 !important;
+  padding-bottom: 15px !important;
+  margin-bottom: 15px !important;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05) !important;
+}
+
+/* 文章元信息布局优化 */
+.article-meta-wrap {
+  position: relative;
+  z-index: 2;
+  display: flex !important;
+  flex-wrap: wrap !important;
+  align-items: center !important;
+  margin: 15px 0 !important;
+  padding: 10px 0 !important;
+  gap: 12px !important;
+  font-size: 0.9em !important;
+}
+
+/* 确保内部链接可点击 */
+.article-meta-wrap a,
+.article-meta__tags,
+.article-meta__categories {
+  position: relative;
+  z-index: 2;
+}
+
+/* 文章摘要样式 */
+.recent-post-item .post-content {
+  position: relative;
+  z-index: 2;
+  color: #4c4948 !important;
+  font-size: 1em !important;
+  line-height: 1.8 !important;
+  margin-top: 20px !important;
+  padding-top: 15px !important;
+  border-top: 1px solid rgba(0, 0, 0, 0.05) !important;
+}
+
+/* 标签和分类样式 */
+.article-meta__tags,
+.article-meta__categories {
+  background: #e3f2fd !important;
+  padding: 4px 10px !important;
+  border-radius: 6px !important;
+  color: #1976d2 !important;
+  font-weight: 500 !important;
+  transition: all 0.3s ease;
+}
+
+.article-meta__tags:hover,
+.article-meta__categories:hover {
+  background: #1976d2 !important;
+  color: #fff !important;
+}
+
+/* 发布日期样式 */
+.post-meta-date {
+  background: #f6f8fa !important;
+  padding: 4px 10px !important;
+  border-radius: 6px !important;
+  color: #6c757d !important;
+}
+
+/* 更新日期样式 */
+.post-meta-update {
+  color: #6c757d !important;
+  margin-left: 10px !important;
+}
+
+/* 评论数样式 */
+.article-meta__comment-count {
+  background: #eef2f7 !important;
+  padding: 4px 10px !important;
+  border-radius: 6px !important;
+  color: #6c757d !important;
+}
+
+/* 阅读更多按钮样式 */
+.article-container .more-btn {
+  background: #49b1f5 !important;
+  color: white !important;
+  padding: 8px 20px !important;
+  border-radius: 25px !important;
+  font-weight: 500 !important;
+  margin-top: 15px !important;
+  display: inline-block !important;
+  transition: all 0.3s ease !important;
+}
+
+.article-container .more-btn:hover {
+  background: #ff7242 !important;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(255, 114, 66, 0.2);
+}
+
+#recent-posts > .recent-post-item >.recent-post-info {
+  padding: 20px !important;
+}
+
+/* 双栏布局优化 */
+@media screen and (min-width: 1200px) {
+  /* 创建一个包装容器，只对文章列表应用grid布局 */
+  #recent-posts {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 25px;
+    margin-bottom: 2rem;
+  }
+  
+  #recent-posts > .recent-post-item {
+    margin: 0 !important;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+/* 分页导航样式 - 移到媒体查询外面，确保全局生效 */
+#pagination {
+  width: 100%;
+  margin: 2rem auto;
+  text-align: center;
+  grid-column: 1 / -1; /* 跨越所有列 */
+  clear: both; /* 清除浮动 */
+}
+
+.pagination {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.page-number,
+.extend.prev,
+.extend.next {
+  display: inline-block;
+  padding: 8px 16px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  margin: 0 0.3rem !important;
+}
+
+.page-number.current {
+  background: #49b1f5;
+  color: #fff;
+}
+
+.page-number:hover,
+.extend:hover {
+  background: #f0f7ff;
+  transform: translateY(-2px);
+}
+
+/* 移动端适配分页导航 */
+@media screen and (max-width: 768px) {
+  #pagination {
+    margin: 1rem auto;
+  }
+  
+  .page-number,
+  .extend.prev,
+  .extend.next {
+    padding: 6px 12px;
+    font-size: 0.9em;
+  }
+}
+
+/* 文章信息图标样式 */
+.article-meta-wrap i {
+  margin-right: 4px !important;
+  color: #858585 !important;
+}
+
+/* 分隔线样式 */
+.article-meta-wrap .article-meta-separator {
+  margin: 0 8px !important;
+  color: #ccc !important;
+}
+
+/* 文章卡片链接样式 */
+a.recent-post-item {
+  text-decoration: none !important;
+  color: inherit;
+  display: block;
+  transition: all 0.3s ease-in-out;
+}
+
+a.recent-post-item:hover {
+  text-decoration: none !important;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08) !important;
+}
+
+/* 移除原有的标题链接样式 */
+.article-title {
+  color: #344c67 !important;
+  font-size: 1.6em !important;
+  font-weight: 1000 !important;
+  line-height: 1.5 !important;
+  padding-bottom: 15px !important;
+  margin-bottom: 15px !important;
+  border-bottom: 5px solid rgba(0, 0, 0, 0.05) !important;
+}
+
