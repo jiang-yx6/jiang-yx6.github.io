@@ -1,3 +1,15 @@
+/* 导航栏背景 */
+#nav {
+  background: rgba(255, 255, 255, 0.8) !important;
+  backdrop-filter: blur(5px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* 暗色模式适配 */
+[data-theme='dark'] #nav {
+  background: rgba(18, 18, 18, 0.8) !important;
+}
+
 /* 一级菜单居中 */
 #nav .menus_items {
   position: absolute !important;
@@ -75,3 +87,4 @@
   background-color: #3eb8be;
   border-radius: 8px;
 }
+

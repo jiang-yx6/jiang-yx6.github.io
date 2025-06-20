@@ -297,6 +297,7 @@ document.addEventListener('DOMContentLoaded', function () {
    * 滾動處理
    */
   const scrollFn = function () {
+    console.log('scrollFn')
     const $rightside = document.getElementById('rightside')
     const innerHeight = window.innerHeight + 56
 
